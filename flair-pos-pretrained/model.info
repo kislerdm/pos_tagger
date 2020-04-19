@@ -1,0 +1,47 @@
+ Data: https://github.com/UniversalDependencies/UD_English-GUM
+ Model: "SequenceTagger(
+  (embeddings): StackedEmbeddings(
+    (list_embedding_0): FlairEmbeddings(
+      (lm): LanguageModel(
+        (drop): Dropout(p=0.25, inplace=False)
+        (encoder): Embedding(275, 100)
+        (rnn): LSTM(100, 1024)
+        (decoder): Linear(in_features=1024, out_features=275, bias=True)
+      )
+    )
+    (list_embedding_1): FlairEmbeddings(
+      (lm): LanguageModel(
+        (drop): Dropout(p=0.25, inplace=False)
+        (encoder): Embedding(275, 100)
+        (rnn): LSTM(100, 1024)
+        (decoder): Linear(in_features=1024, out_features=275, bias=True)
+      )
+    )
+  )
+  (word_dropout): WordDropout(p=0.05)
+  (locked_dropout): LockedDropout(p=0.5)
+  (embedding2nn): Linear(in_features=2048, out_features=2048, bias=True)
+  (rnn): LSTM(2048, 256, batch_first=True, bidirectional=True)
+  (linear): Linear(in_features=512, out_features=21, bias=True)
+  (beta): 1.0
+  (weights): None
+  (weight_tensor) None
+)"
+ ----------------------------------------------------------------------------------------------------
+ Corpus: "Corpus: 3753 train + 890 dev + 890 test sentences"
+ ----------------------------------------------------------------------------------------------------
+ Parameters:
+  - learning_rate: "1"
+  - mini_batch_size: "32"
+  - patience: "1"
+  - anneal_factor: "0.5"
+  - max_epochs: "100"
+  - shuffle: "True"
+  - train_with_dev: "False"
+  - batch_growth_annealing: "False"
+ ----------------------------------------------------------------------------------------------------
+ Model training base path: "/home/dkisler/projects/assesment_model"
+ ----------------------------------------------------------------------------------------------------
+ Device: cpu
+ ----------------------------------------------------------------------------------------------------
+ Embeddings storage mode: cpu
